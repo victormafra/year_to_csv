@@ -19,11 +19,11 @@ def get_scale(image_name):
     image = image.convert('RGB')
     pixel = image.load()
     scale = [(255, 255, 255),
-             pixel[64, 1222],
-             pixel[137, 1222],
-             pixel[209, 1222],
-             pixel[282, 1222],
-             pixel[353, 1222]]
+             pixel[100, 1888],
+             pixel[212, 1888],
+             pixel[324, 1888],
+             pixel[436, 1888],
+             pixel[548, 1888]]
 
     return scale
 
@@ -39,10 +39,11 @@ def color_from_scale(day_color, scale):
 def date_to_pixel(date):
     m = date.month
     d = date.day
-    initial = 55
-    distance = 36
-    i = initial + distance * (m-1)
-    j = initial + distance * (d-1)
+    initial = 85
+    distance_x = 55
+    distance_y = 56
+    i = initial + distance_x * (m-1)
+    j = initial + distance_y * (d-1)
 
     return i, j
 
